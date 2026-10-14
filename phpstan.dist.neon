@@ -1,0 +1,6 @@
+parameters:
+    level: max
+    paths:
+        - bin/fizzbuzz
+        - src
+        - tests

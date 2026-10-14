@@ -1,0 +1,35 @@
+{
+    "name": "nouetseb/fizzbuzz",
+    "description": "FizzBuzz with configurable rules and a lazy generator.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FizzBuzz\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FizzBuzz\\Tests\\": "tests/"
+        }
+    },
+    "bin": ["bin/fizzbuzz"],
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse",
+        "cs": "php-cs-fixer check --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "check": ["@cs", "@analyse", "@test"]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
